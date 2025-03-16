@@ -3,7 +3,7 @@ package wallet
 import (
 	"testing"
 
-	"github.com/0xPolygon/go-ibft/messages/proto"
+	"github.com/ether-edge/go-ibft/messages/proto"
 	"github.com/stretchr/testify/require"
 
 	"github.com/ether-edge/ether-edge/bls"

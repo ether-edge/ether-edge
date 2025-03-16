@@ -1,7 +1,7 @@
 package ibft
 
 import (
-	"github.com/0xPolygon/go-ibft/messages/proto"
+	"github.com/ether-edge/go-ibft/messages/proto"
 	"github.com/ether-edge/ether-edge/network"
 	"github.com/ether-edge/ether-edge/types"
 	"github.com/libp2p/go-libp2p/core/peer"

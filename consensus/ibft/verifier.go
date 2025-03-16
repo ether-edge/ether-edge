@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 
-	"github.com/0xPolygon/go-ibft/messages"
-	protoIBFT "github.com/0xPolygon/go-ibft/messages/proto"
+	"github.com/ether-edge/go-ibft/messages"
+	protoIBFT "github.com/ether-edge/go-ibft/messages/proto"
 	"github.com/ether-edge/ether-edge/consensus/ibft/signer"
 	"github.com/ether-edge/ether-edge/crypto"
 	"github.com/ether-edge/ether-edge/types"

@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/0xPolygon/go-ibft/messages"
-	"github.com/0xPolygon/go-ibft/messages/proto"
+	"github.com/ether-edge/go-ibft/messages"
+	"github.com/ether-edge/go-ibft/messages/proto"
 	"github.com/ether-edge/ether-edge/bls"
 	"github.com/ether-edge/ether-edge/consensus"
 	"github.com/ether-edge/ether-edge/consensus/polybft/bitmap"

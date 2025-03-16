@@ -20,8 +20,8 @@ import (
 	"github.com/ether-edge/ether-edge/types"
 	bolt "go.etcd.io/bbolt"
 
-	"github.com/0xPolygon/go-ibft/messages"
-	"github.com/0xPolygon/go-ibft/messages/proto"
+	"github.com/ether-edge/go-ibft/messages"
+	"github.com/ether-edge/go-ibft/messages/proto"
 	hcf "github.com/hashicorp/go-hclog"
 )
 

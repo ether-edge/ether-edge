@@ -3,7 +3,7 @@ package polybft
 import (
 	"fmt"
 
-	ibftProto "github.com/0xPolygon/go-ibft/messages/proto"
+	ibftProto "github.com/ether-edge/go-ibft/messages/proto"
 	polybftProto "github.com/ether-edge/ether-edge/consensus/polybft/proto"
 	"github.com/ether-edge/ether-edge/types"
 	"github.com/libp2p/go-libp2p/core/peer"

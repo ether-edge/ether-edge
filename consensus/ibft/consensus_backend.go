@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/0xPolygon/go-ibft/messages"
-	"github.com/0xPolygon/go-ibft/messages/proto"
+	"github.com/ether-edge/go-ibft/messages"
+	"github.com/ether-edge/go-ibft/messages/proto"
 	"github.com/ether-edge/ether-edge/consensus"
 	"github.com/ether-edge/ether-edge/consensus/ibft/signer"
 	"github.com/ether-edge/ether-edge/helper/hex"
