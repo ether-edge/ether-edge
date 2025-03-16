@@ -3,8 +3,8 @@ package addresslist
 import (
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/state/runtime"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/state/runtime"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/stretchr/testify/require"
 	"github.com/umbracle/ethgo/abi"
 )

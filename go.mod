@@ -1,4 +1,4 @@
-module github.com/0xPolygon/polygon-edge
+module github.com/ether-edge/ether-edge
 
 go 1.20
 

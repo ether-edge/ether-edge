@@ -11,17 +11,17 @@ import (
 
 	"github.com/multiformats/go-multiaddr"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/contractsapi"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/contractsapi/artifact"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/validator"
-	"github.com/0xPolygon/polygon-edge/contracts"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/server"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/chain"
+	"github.com/ether-edge/ether-edge/command"
+	"github.com/ether-edge/ether-edge/command/helper"
+	"github.com/ether-edge/ether-edge/consensus/polybft"
+	"github.com/ether-edge/ether-edge/consensus/polybft/contractsapi"
+	"github.com/ether-edge/ether-edge/consensus/polybft/contractsapi/artifact"
+	"github.com/ether-edge/ether-edge/consensus/polybft/validator"
+	"github.com/ether-edge/ether-edge/contracts"
+	"github.com/ether-edge/ether-edge/helper/common"
+	"github.com/ether-edge/ether-edge/server"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 const (

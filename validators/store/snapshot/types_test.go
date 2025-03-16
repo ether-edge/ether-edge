@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
-	"github.com/0xPolygon/polygon-edge/validators/store"
+	"github.com/ether-edge/ether-edge/crypto"
+	"github.com/ether-edge/ether-edge/types"
+	"github.com/ether-edge/ether-edge/validators"
+	"github.com/ether-edge/ether-edge/validators/store"
 	"github.com/stretchr/testify/assert"
 )
 

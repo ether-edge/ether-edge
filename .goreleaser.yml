@@ -1,4 +1,4 @@
-project_name: polygon-edge
+project_name: ether-edge
 
 release:
   disable: false
@@ -8,7 +8,7 @@ release:
 builds:
   - id: darwin-amd64
     main: ./main.go
-    binary: polygon-edge
+    binary: ether-edge
     goos:
       - darwin
     goarch:
@@ -17,11 +17,11 @@ builds:
       - CC=o64-clang
       - CXX=o64-clang++
     ldflags:
-      -s -w -X 'github.com/0xPolygon/polygon-edge/versioning.Version=v{{ .Version }}'
+      -s -w -X 'github.com/ether-edge/ether-edge/versioning.Version=v{{ .Version }}'
 
   - id: darwin-arm64
     main: ./main.go
-    binary: polygon-edge
+    binary: ether-edge
     goos:
       - darwin
     goarch:
@@ -30,11 +30,11 @@ builds:
       - CC=oa64-clang
       - CXX=oa64-clang++
     ldflags:
-      -s -w -X 'github.com/0xPolygon/polygon-edge/versioning.Version=v{{ .Version }}'
+      -s -w -X 'github.com/ether-edge/ether-edge/versioning.Version=v{{ .Version }}'
 
   - id: linux-amd64
     main: ./main.go
-    binary: polygon-edge
+    binary: ether-edge
     goos:
       - linux
     goarch:
@@ -44,14 +44,14 @@ builds:
       - CXX=g++
     ldflags:
       # We need to build a static binary because we are building in a glibc based system and running in a musl container
-      -s -w -linkmode external -extldflags "-static" -X 'github.com/0xPolygon/polygon-edge/versioning.Version=v{{ .Version }}'
+      -s -w -linkmode external -extldflags "-static" -X 'github.com/ether-edge/ether-edge/versioning.Version=v{{ .Version }}'
     tags:
       - netgo
       - osusergo
 
   - id: linux-arm64
     main: ./main.go
-    binary: polygon-edge
+    binary: ether-edge
     goos:
       - linux
     goarch:
@@ -61,7 +61,7 @@ builds:
       - CXX=aarch64-linux-gnu-g++
     ldflags:
       # We need to build a static binary because we are building in a glibc based system and running in a musl container
-      -s -w -linkmode external -extldflags "-static" -X 'github.com/0xPolygon/polygon-edge/versioning.Version=v{{ .Version }}'
+      -s -w -linkmode external -extldflags "-static" -X 'github.com/ether-edge/ether-edge/versioning.Version=v{{ .Version }}'
     tags:
       - netgo
       - osusergo
@@ -85,8 +85,8 @@ archives:
 #      - rpm
 #
 #    contents:
-#      - src: polygon-edge.service
-#        dst: /lib/systemd/system/polygon-edge.service
+#      - src: ether-edge.service
+#        dst: /lib/systemd/system/ether-edge.service
 #        type: config
 #
 #    overrides:

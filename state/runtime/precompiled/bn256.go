@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/state/runtime"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/chain"
+	"github.com/ether-edge/ether-edge/state/runtime"
+	"github.com/ether-edge/ether-edge/types"
 	bn256 "github.com/umbracle/go-eth-bn256"
 )
 

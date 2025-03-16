@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	testproto "github.com/0xPolygon/polygon-edge/network/proto"
+	testproto "github.com/ether-edge/ether-edge/network/proto"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/require"
 )

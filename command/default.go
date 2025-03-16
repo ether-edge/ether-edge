@@ -5,13 +5,13 @@ import (
 
 	"github.com/umbracle/ethgo"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/server"
+	"github.com/ether-edge/ether-edge/chain"
+	"github.com/ether-edge/ether-edge/server"
 )
 
 const (
 	DefaultGenesisFileName           = "genesis.json"
-	DefaultChainName                 = "polygon-edge"
+	DefaultChainName                 = "ether-edge"
 	DefaultChainID                   = 100
 	DefaultConsensus                 = server.PolyBFTConsensus
 	DefaultGenesisGasUsed            = 458752  // 0x70000

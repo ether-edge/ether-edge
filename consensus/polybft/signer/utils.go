@@ -6,9 +6,9 @@ import (
 
 	"github.com/umbracle/ethgo/abi"
 
-	"github.com/0xPolygon/polygon-edge/bls"
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/bls"
+	"github.com/ether-edge/ether-edge/crypto"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 var (

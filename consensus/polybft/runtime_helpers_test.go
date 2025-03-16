@@ -3,10 +3,10 @@ package polybft
 import (
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/blockchain"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/bitmap"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/validator"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/blockchain"
+	"github.com/ether-edge/ether-edge/consensus/polybft/bitmap"
+	"github.com/ether-edge/ether-edge/consensus/polybft/validator"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 )

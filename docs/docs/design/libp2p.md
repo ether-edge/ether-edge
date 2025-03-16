@@ -12,7 +12,7 @@ PolyBFT uses libp2p's distributed hash table (DHT) based on the Kademlia algorit
 
 ## Peer routing
 
-Bootnodes act as rendezvous servers that help new nodes discover and connect to the network. The polygon-edge command allows you to specify one or more bootnodes while creating the genesis file. Bootnodes are defined using libp2p multiaddrs, which contain information about the protocol, network address, and node port number.
+Bootnodes act as rendezvous servers that help new nodes discover and connect to the network. The ether-edge command allows you to specify one or more bootnodes while creating the genesis file. Bootnodes are defined using libp2p multiaddrs, which contain information about the protocol, network address, and node port number.
 
 ```bash
 --bootnode /ip4/127.0.0.1/tcp/30301/p2p/16Uiu2HAmJxxH1tScDX2rLGSU9exnuvZKNM9SoK3v315azp68DLPW \

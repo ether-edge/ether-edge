@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/secrets/helper"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/command"
+	"github.com/ether-edge/ether-edge/helper/common"
+	"github.com/ether-edge/ether-edge/secrets"
+	"github.com/ether-edge/ether-edge/secrets/helper"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 const (

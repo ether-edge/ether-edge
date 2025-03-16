@@ -10,7 +10,7 @@ When deploying with `polybft` consensus, there are some additional dependencies:
 
 ## Local development
 
-Running `polygon-edge` from local binary can be done very easily by using provided `scripts` folder.
+Running `ether-edge` from local binary can be done very easily by using provided `scripts` folder.
 
 * `scripts/cluster ibft` - deploy environment with `ibft` consensus
 * `scripts/cluster polybft` - deploy environment with `polybft` consensus

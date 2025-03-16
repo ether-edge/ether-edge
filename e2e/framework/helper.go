@@ -13,15 +13,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/0xPolygon/polygon-edge/contracts/abis"
-	"github.com/0xPolygon/polygon-edge/contracts/staking"
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/helper/hex"
-	"github.com/0xPolygon/polygon-edge/helper/tests"
-	"github.com/0xPolygon/polygon-edge/server/proto"
-	txpoolProto "github.com/0xPolygon/polygon-edge/txpool/proto"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/contracts/abis"
+	"github.com/ether-edge/ether-edge/contracts/staking"
+	"github.com/ether-edge/ether-edge/crypto"
+	"github.com/ether-edge/ether-edge/helper/common"
+	"github.com/ether-edge/ether-edge/helper/hex"
+	"github.com/ether-edge/ether-edge/helper/tests"
+	"github.com/ether-edge/ether-edge/server/proto"
+	txpoolProto "github.com/ether-edge/ether-edge/txpool/proto"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/umbracle/ethgo"
 	"github.com/umbracle/ethgo/jsonrpc"
@@ -381,7 +381,7 @@ func MethodSigWithParams(nameWithParams string) []byte {
 
 // tempDir returns directory path in tmp with random directory name
 func tempDir() (string, error) {
-	return os.MkdirTemp("/tmp", "polygon-edge-e2e-")
+	return os.MkdirTemp("/tmp", "ether-edge-e2e-")
 }
 
 func ToLocalIPv4LibP2pAddr(port int, nodeID string) string {

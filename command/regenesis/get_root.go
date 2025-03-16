@@ -3,7 +3,7 @@ package regenesis
 import (
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/command"
+	"github.com/ether-edge/ether-edge/command"
 	"github.com/spf13/cobra"
 	"github.com/umbracle/ethgo"
 	"github.com/umbracle/ethgo/jsonrpc"
@@ -15,7 +15,7 @@ var (
 )
 
 /*
-./polygon-edge regenesis getroot --rpc "http://localhost:10002"
+./ether-edge regenesis getroot --rpc "http://localhost:10002"
 */
 func GetRootCMD() *cobra.Command {
 	getRootCmd := &cobra.Command{

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"math/big"
 
-	cmdhelper "github.com/0xPolygon/polygon-edge/command/helper"
-	rootHelper "github.com/0xPolygon/polygon-edge/command/rootchain/helper"
-	"github.com/0xPolygon/polygon-edge/types"
+	cmdhelper "github.com/ether-edge/ether-edge/command/helper"
+	rootHelper "github.com/ether-edge/ether-edge/command/rootchain/helper"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 const (

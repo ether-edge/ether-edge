@@ -10,14 +10,14 @@ import (
 	"github.com/umbracle/ethgo"
 	"github.com/umbracle/ethgo/wallet"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/command/bridge/common"
-	"github.com/0xPolygon/polygon-edge/command/rootchain/helper"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/contractsapi"
-	"github.com/0xPolygon/polygon-edge/contracts"
-	helperCommon "github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/txrelayer"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/command"
+	"github.com/ether-edge/ether-edge/command/bridge/common"
+	"github.com/ether-edge/ether-edge/command/rootchain/helper"
+	"github.com/ether-edge/ether-edge/consensus/polybft/contractsapi"
+	"github.com/ether-edge/ether-edge/contracts"
+	helperCommon "github.com/ether-edge/ether-edge/helper/common"
+	"github.com/ether-edge/ether-edge/txrelayer"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 var (

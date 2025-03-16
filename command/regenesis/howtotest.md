@@ -21,7 +21,7 @@ This document outlines step necessary to perform a regenesis data migration.
 3. Get trie root
 
     ```bash
-    ./polygon-edge regenesis getroot --rpc "http://localhost:10002"
+    ./ether-edge regenesis getroot --rpc "http://localhost:10002"
 
     [Trie copy SUCCESS]
     state root 0xf5ef1a28c82226effb90f4465180ec3469226747818579673f4be929f1cd8663 for block 38
@@ -30,7 +30,7 @@ This document outlines step necessary to perform a regenesis data migration.
 4. Make trie snapshot
 
     ```bash
-    ./polygon-edge regenesis --target-path ./trie_new --stateRoot 0xf5ef1a28c82226effb90f4465180ec3469226747818579673f4be929f1cd8663  --source-path ./test-chain-1/trie 
+    ./ether-edge regenesis --target-path ./trie_new --stateRoot 0xf5ef1a28c82226effb90f4465180ec3469226747818579673f4be929f1cd8663  --source-path ./test-chain-1/trie 
 
     [Trie copy SUCCESS]
 
@@ -45,7 +45,7 @@ This document outlines step necessary to perform a regenesis data migration.
 6. Create new validators
 
     ```bash
-    ./polygon-edge polybft-secrets --insecure --data-dir test-chain- --num 4
+    ./ether-edge polybft-secrets --insecure --data-dir test-chain- --num 4
 
     [WARNING: INSECURE LOCAL SECRETS - SHOULD NOT BE RUN IN PRODUCTION]
 
@@ -80,7 +80,7 @@ This document outlines step necessary to perform a regenesis data migration.
 7. Generate genesis file
 
     ```bash
-    ./polygon-edge genesis --consensus polybft \
+    ./ether-edge genesis --consensus polybft \
     --block-gas-limit 10000000 \
     --proxy-contracts-admin 0x5aaeb6053f3e94c9b9a09f33669435e7ef1beaed \
     --epoch-size 10 --trieroot 0xf5ef1a28c82226effb90f4465180ec3469226747818579673f4be929f1cd8663
@@ -94,10 +94,10 @@ This document outlines step necessary to perform a regenesis data migration.
 8. Try to start a new v0.7 chain
 
     ```bash
-    ./polygon-edge server --data-dir ./test-chain-1 --chain genesis.json --grpc-address :10000 --libp2p :30301 --jsonrpc :10002 --seal --log-level DEBUG &
-    ./polygon-edge server --data-dir ./test-chain-2 --chain genesis.json --grpc-address :20000 --libp2p :30302 --jsonrpc :20002 --seal --log-level DEBUG &
-    ./polygon-edge server --data-dir ./test-chain-3 --chain genesis.json --grpc-address :30000 --libp2p :30303 --jsonrpc :30002 --seal --log-level DEBUG &
-    ./polygon-edge server --data-dir ./test-chain-4 --chain genesis.json --grpc-address :40000 --libp2p :30304 --jsonrpc :40002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-1 --chain genesis.json --grpc-address :10000 --libp2p :30301 --jsonrpc :10002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-2 --chain genesis.json --grpc-address :20000 --libp2p :30302 --jsonrpc :20002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-3 --chain genesis.json --grpc-address :30000 --libp2p :30303 --jsonrpc :30002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-4 --chain genesis.json --grpc-address :40000 --libp2p :30304 --jsonrpc :40002 --seal --log-level DEBUG &
     wait
 
     [1] 2615
@@ -109,17 +109,17 @@ This document outlines step necessary to perform a regenesis data migration.
     2023-03-15T11:02:25.233+0400 [INFO]  polygon.server: Data dir: path=./test-chain-3
     2023-03-15T11:02:25.251+0400 [DEBUG] polygon.server: DataDog profiler disabled, set DD_PROFILING_ENABLED env var to enable it.
     invalid initial state root
-    [1]    exit 1     ./polygon-edge server --data-dir ./test-chain-1 --chain genesis.json  :10000 
+    [1]    exit 1     ./ether-edge server --data-dir ./test-chain-1 --chain genesis.json  :10000 
     2023-03-15T11:02:25.299+0400 [INFO]  polygon.server: Data dir: path=./test-chain-2
     2023-03-15T11:02:25.302+0400 [DEBUG] polygon.server: DataDog profiler disabled, set DD_PROFILING_ENABLED env var to enable it.
     2023-03-15T11:02:25.396+0400 [INFO]  polygon.server: Data dir: path=./test-chain-4
     2023-03-15T11:02:25.413+0400 [DEBUG] polygon.server: DataDog profiler disabled, set DD_PROFILING_ENABLED env var to enable it.
     invalid initial state root
-    [3]  - exit 1     ./polygon-edge server --data-dir ./test-chain-3 --chain genesis.json  :30000 
+    [3]  - exit 1     ./ether-edge server --data-dir ./test-chain-3 --chain genesis.json  :30000 
     invalid initial state root
-    [2]  - exit 1     ./polygon-edge server --data-dir ./test-chain-2 --chain genesis.json  :20000 
+    [2]  - exit 1     ./ether-edge server --data-dir ./test-chain-2 --chain genesis.json  :20000 
     invalid initial state root
-    [4]  + exit 1     ./polygon-edge server --data-dir ./test-chain-4 --chain genesis.json  :40000 
+    [4]  + exit 1     ./ether-edge server --data-dir ./test-chain-4 --chain genesis.json  :40000 
     ```
 
     It fails, because we haven't provided trie database with correct state trie.
@@ -140,10 +140,10 @@ This document outlines step necessary to perform a regenesis data migration.
 10. Run chain again
 
     ```bash
-    ./polygon-edge server --data-dir ./test-chain-1 --chain genesis.json --grpc-address :10000 --libp2p :30301 --jsonrpc :10002 --seal --log-level DEBUG &
-    ./polygon-edge server --data-dir ./test-chain-2 --chain genesis.json --grpc-address :20000 --libp2p :30302 --jsonrpc :20002 --seal --log-level DEBUG &
-    ./polygon-edge server --data-dir ./test-chain-3 --chain genesis.json --grpc-address :30000 --libp2p :30303 --jsonrpc :30002 --seal --log-level DEBUG &
-    ./polygon-edge server --data-dir ./test-chain-4 --chain genesis.json --grpc-address :40000 --libp2p :30304 --jsonrpc :40002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-1 --chain genesis.json --grpc-address :10000 --libp2p :30301 --jsonrpc :10002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-2 --chain genesis.json --grpc-address :20000 --libp2p :30302 --jsonrpc :20002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-3 --chain genesis.json --grpc-address :30000 --libp2p :30303 --jsonrpc :30002 --seal --log-level DEBUG &
+    ./ether-edge server --data-dir ./test-chain-4 --chain genesis.json --grpc-address :40000 --libp2p :30304 --jsonrpc :40002 --seal --log-level DEBUG &
     wait
 
     [1] 2721

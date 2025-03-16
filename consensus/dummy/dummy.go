@@ -1,12 +1,12 @@
 package dummy
 
 import (
-	"github.com/0xPolygon/polygon-edge/blockchain"
-	"github.com/0xPolygon/polygon-edge/consensus"
-	"github.com/0xPolygon/polygon-edge/helper/progress"
-	"github.com/0xPolygon/polygon-edge/state"
-	"github.com/0xPolygon/polygon-edge/txpool"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/blockchain"
+	"github.com/ether-edge/ether-edge/consensus"
+	"github.com/ether-edge/ether-edge/helper/progress"
+	"github.com/ether-edge/ether-edge/state"
+	"github.com/ether-edge/ether-edge/txpool"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/hashicorp/go-hclog"
 )
 

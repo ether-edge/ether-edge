@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"testing"
 
-	testHelper "github.com/0xPolygon/polygon-edge/helper/tests"
-	"github.com/0xPolygon/polygon-edge/types"
+	testHelper "github.com/ether-edge/ether-edge/helper/tests"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/stretchr/testify/assert"
 )
 

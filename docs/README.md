@@ -7,8 +7,8 @@ Welcome to the Polygon Edge documentation, built with [the Material theme for Mk
 ### Clone the repo
 
 ```sh
-https://github.com/0xPolygon/polygon-edge.git
-cd polygon-edge/docs
+https://github.com/ether-edge/ether-edge.git
+cd ether-edge/docs
 ```
 
 ### Run with Python
@@ -36,7 +36,7 @@ The site runs at: http://127.0.0.1:8000/
 1. Spin up the image:
 
 ```sh
-docker build -t polygon-edge-docs .
+docker build -t ether-edge-docs .
 ```
 
 2. Run the container:

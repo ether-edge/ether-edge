@@ -14,16 +14,16 @@ import (
 	"github.com/umbracle/ethgo"
 	"github.com/umbracle/ethgo/jsonrpc"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	ibftOp "github.com/0xPolygon/polygon-edge/consensus/ibft/proto"
-	"github.com/0xPolygon/polygon-edge/contracts/staking"
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/e2e/framework"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	stakingHelper "github.com/0xPolygon/polygon-edge/helper/staking"
-	"github.com/0xPolygon/polygon-edge/helper/tests"
-	txpoolOp "github.com/0xPolygon/polygon-edge/txpool/proto"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/chain"
+	ibftOp "github.com/ether-edge/ether-edge/consensus/ibft/proto"
+	"github.com/ether-edge/ether-edge/contracts/staking"
+	"github.com/ether-edge/ether-edge/crypto"
+	"github.com/ether-edge/ether-edge/e2e/framework"
+	"github.com/ether-edge/ether-edge/helper/common"
+	stakingHelper "github.com/ether-edge/ether-edge/helper/staking"
+	"github.com/ether-edge/ether-edge/helper/tests"
+	txpoolOp "github.com/ether-edge/ether-edge/txpool/proto"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/golang/protobuf/ptypes/any"
 )
 
@@ -788,7 +788,7 @@ func TestSnapshotUpdating(t *testing.T) {
 				config.PremineValidatorBalance(defaultBalance)
 			} else {
 				// Other nodes should not be in the validator set
-				dirPrefix := "polygon-edge-non-validator-"
+				dirPrefix := "ether-edge-non-validator-"
 				config.SetIBFTDirPrefix(dirPrefix)
 				config.SetIBFTDir(fmt.Sprintf("%s%d", dirPrefix, i))
 			}

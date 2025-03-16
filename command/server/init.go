@@ -6,16 +6,16 @@ import (
 	"math"
 	"net"
 
-	"github.com/0xPolygon/polygon-edge/command/server/config"
+	"github.com/ether-edge/ether-edge/command/server/config"
 
-	helperCommon "github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/network/common"
+	helperCommon "github.com/ether-edge/ether-edge/helper/common"
+	"github.com/ether-edge/ether-edge/network/common"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/network"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/server"
+	"github.com/ether-edge/ether-edge/chain"
+	"github.com/ether-edge/ether-edge/command/helper"
+	"github.com/ether-edge/ether-edge/network"
+	"github.com/ether-edge/ether-edge/secrets"
+	"github.com/ether-edge/ether-edge/server"
 )
 
 var (

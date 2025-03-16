@@ -75,7 +75,7 @@ jobs:
           sed 's/# backend "s3" {}/backend "s3" {}/' main.tf > main.tf.tmp && mv main.tf.tmp main.tf
       - name: Terraform Init
         id: init
-        run: terraform init -backend-config="bucket=polygon-edge-devnet-terraform-states" -backend-config="key=state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }}" -backend-config="region=${{ secrets.AWS_REGION }}"
+        run: terraform init -backend-config="bucket=ether-edge-devnet-terraform-states" -backend-config="key=state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }}" -backend-config="region=${{ secrets.AWS_REGION }}"
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
@@ -88,7 +88,7 @@ jobs:
           TF_VAR_owner: ${{ secrets.TF_VAR_OWNER }}
           TF_VAR_base_instance_type: ${{ secrets.TF_VAR_BASE_INSTANCE_TYPE }}
       - name: Retrieve state file from s3
-        run: aws s3 cp s3://polygon-edge-devnet-terraform-states/state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }} state.json
+        run: aws s3 cp s3://ether-edge-devnet-terraform-states/state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }} state.json
       - name: Configure private keys
         run: |
           terraform output pk_ansible > ~/devnet_private.key
@@ -118,14 +118,14 @@ jobs:
 
           {% for item in hostvars %}
           {% if (hostvars[item].tags.Role == "fullnode" or hostvars[item].tags.Role == "validator") %}
-              polygon-edge polybft-secrets --data-dir {{ hostvars[item].tags["Name"] }} --json --insecure > {{ hostvars[item].tags["Name"] }}.json
+              ether-edge polybft-secrets --data-dir {{ hostvars[item].tags["Name"] }} --json --insecure > {{ hostvars[item].tags["Name"] }}.json
           {% endif %}
           {% endfor %}
 
               BURN_CONTRACT_ADDRESS=0x0000000000000000000000000000000000000000
               PROXY_CONTRACTS_ADMIN=0x5aaeb6053f3e94c9b9a09f33669435e7ef1beaed
 
-              polygon-edge genesis \
+              ether-edge genesis \
                           --consensus polybft \
                           {% for item in hostvars %}{% if (hostvars[item].tags.Role == "fullnode" or hostvars[item].tags.Role == "validator") %} --bootnode /dns4/{{ hostvars[item].tags["Name"] }}/tcp/{{ edge_p2p_port }}/p2p/$(cat {{ hostvars[item].tags["Name"] }}.json | jq -r '.[0].node_id') {% endif %}{% endfor %} \
                           {% for item in hostvars %}{% if (hostvars[item].tags.Role == "fullnode" or hostvars[item].tags.Role == "validator") %} --premine $(cat {{ hostvars[item].tags["Name"] }}.json | jq -r '.[0].address'):1000000000000000000000000 {% endif %}{% endfor %} \
@@ -142,26 +142,26 @@ jobs:
                           --native-token-config MyToken:MTK:18:true:{{ loadtest_account }} \
                           --proxy-contracts-admin $PROXY_CONTRACTS_ADMIN
 
-              polygon-edge polybft stake-manager-deploy \
+              ether-edge polybft stake-manager-deploy \
                   --jsonrpc {{ rootchain_json_rpc }} \
                   --proxy-contracts-admin $PROXY_CONTRACTS_ADMIN \
                   --test
 
-              polygon-edge rootchain deploy \
+              ether-edge rootchain deploy \
                           --stake-manager $(cat genesis.json | jq -r '.params.engine.polybft.bridge.stakeManagerAddr') \
                           --stake-token $(cat genesis.json | jq -r '.params.engine.polybft.bridge.stakeTokenAddr') \
                           --json-rpc {{ rootchain_json_rpc }} \
                           --proxy-contracts-admin $PROXY_CONTRACTS_ADMIN \
                           --test
 
-              polygon-edge rootchain fund \
+              ether-edge rootchain fund \
                           --stake-token $(cat genesis.json | jq -r '.params.engine.polybft.bridge.stakeTokenAddr') \
                           --mint \
                           --addresses $(cat validator-*.json | jq -r ".[].address" | paste -sd "," - | tr -d '\n') \
                           --amounts $(for f in validator-*.json; do echo -n "1000000000000000000000000,"; done | sed 's/,$//') \
                           --json-rpc {{ rootchain_json_rpc }}
 
-              polygon-edge polybft whitelist-validators \
+              ether-edge polybft whitelist-validators \
                   --private-key aa75e9a7d427efc732f8e4f1a5b7646adcc61fd5bae40f80d13c8419c9f43d6d \
                   --addresses $(cat validator-*.json | jq -r ".[].address" | paste -sd "," - | tr -d '\n') \
                   --supernet-manager $(cat genesis.json | jq -r '.params.engine.polybft.bridge.customSupernetManagerAddr') \
@@ -172,12 +172,12 @@ jobs:
           {% if (hostvars[item].tags.Role == "validator") %}
               echo "Registering validator: ${counter}"
 
-              polygon-edge polybft register-validator \
+              ether-edge polybft register-validator \
                           --data-dir {{ hostvars[item].tags["Name"] }} \
                           --supernet-manager $(cat genesis.json | jq -r '.params.engine.polybft.bridge.customSupernetManagerAddr') \
                           --jsonrpc {{ rootchain_json_rpc }}
 
-              polygon-edge polybft stake \
+              ether-edge polybft stake \
                           --data-dir {{ hostvars[item].tags["Name"] }} \
                           --amount 1000000000000000000000000 \
                           --supernet-id $(cat genesis.json | jq -r '.params.engine.polybft.supernetID') \
@@ -194,7 +194,7 @@ jobs:
           {% endif %}
           {% endfor %}
 
-              polygon-edge polybft supernet \
+              ether-edge polybft supernet \
                           --private-key aa75e9a7d427efc732f8e4f1a5b7646adcc61fd5bae40f80d13c8419c9f43d6d \
                           --supernet-manager $(cat genesis.json | jq -r '.params.engine.polybft.bridge.customSupernetManagerAddr') \
                           --finalize-genesis-set \
@@ -279,9 +279,9 @@ jobs:
           sed 's/# backend "s3" {}/backend "s3" {}/' main.tf > main.tf.tmp && mv main.tf.tmp main.tf
       - name: Terraform Init
         id: init
-        run: terraform init -backend-config="bucket=polygon-edge-devnet-terraform-states" -backend-config="key=state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }}" -backend-config="region=${{ secrets.AWS_REGION }}"
+        run: terraform init -backend-config="bucket=ether-edge-devnet-terraform-states" -backend-config="key=state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }}" -backend-config="region=${{ secrets.AWS_REGION }}"
       - name: Retrieve state file from s3
-        run: aws s3 cp s3://polygon-edge-devnet-terraform-states/state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }} state.json
+        run: aws s3 cp s3://ether-edge-devnet-terraform-states/state/${{ secrets.TF_VAR_DEPLOYMENT_NAME }} state.json
       - name: Terraform Destroy
         id: destroy
         run: terraform destroy -auto-approve -state=state.json

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	leveldb2 "github.com/0xPolygon/polygon-edge/blockchain/storage/leveldb"
-	"github.com/0xPolygon/polygon-edge/command"
-	itrie "github.com/0xPolygon/polygon-edge/state/immutable-trie"
-	"github.com/0xPolygon/polygon-edge/types"
+	leveldb2 "github.com/ether-edge/ether-edge/blockchain/storage/leveldb"
+	"github.com/ether-edge/ether-edge/command"
+	itrie "github.com/ether-edge/ether-edge/state/immutable-trie"
+	"github.com/ether-edge/ether-edge/types"
 	hclog "github.com/hashicorp/go-hclog"
 	"github.com/spf13/cobra"
 	"github.com/syndtr/goleveldb/leveldb"
@@ -24,7 +24,7 @@ var (
 )
 
 /*
-Run: ./polygon-edge regenesis history --triedb "path_to_triedb" --chaindb "path_to_blockchain_db"
+Run: ./ether-edge regenesis history --triedb "path_to_triedb" --chaindb "path_to_blockchain_db"
 */
 func HistoryTestCmd() *cobra.Command {
 	historyTestCMD := &cobra.Command{

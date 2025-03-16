@@ -16,16 +16,16 @@ import (
 	"github.com/umbracle/ethgo/abi"
 	"github.com/umbracle/ethgo/jsonrpc"
 
-	"github.com/0xPolygon/polygon-edge/consensus/polybft"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/contractsapi"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/contractsapi/artifact"
-	"github.com/0xPolygon/polygon-edge/contracts"
-	"github.com/0xPolygon/polygon-edge/e2e-polybft/framework"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/helper/hex"
-	"github.com/0xPolygon/polygon-edge/state/runtime/addresslist"
-	"github.com/0xPolygon/polygon-edge/txrelayer"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/consensus/polybft"
+	"github.com/ether-edge/ether-edge/consensus/polybft/contractsapi"
+	"github.com/ether-edge/ether-edge/consensus/polybft/contractsapi/artifact"
+	"github.com/ether-edge/ether-edge/contracts"
+	"github.com/ether-edge/ether-edge/e2e-polybft/framework"
+	"github.com/ether-edge/ether-edge/helper/common"
+	"github.com/ether-edge/ether-edge/helper/hex"
+	"github.com/ether-edge/ether-edge/state/runtime/addresslist"
+	"github.com/ether-edge/ether-edge/txrelayer"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 // getCheckpointManagerValidators queries rootchain validator set on CheckpointManager contract

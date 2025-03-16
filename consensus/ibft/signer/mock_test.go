@@ -1,9 +1,9 @@
 package signer
 
 import (
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
+	"github.com/ether-edge/ether-edge/secrets"
+	"github.com/ether-edge/ether-edge/types"
+	"github.com/ether-edge/ether-edge/validators"
 )
 
 type MockSecretManager struct {

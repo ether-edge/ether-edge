@@ -13,16 +13,16 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	bridgeCommon "github.com/0xPolygon/polygon-edge/command/bridge/common"
-	"github.com/0xPolygon/polygon-edge/command/genesis"
-	cmdHelper "github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/command/polybftsecrets"
-	rootHelper "github.com/0xPolygon/polygon-edge/command/rootchain/helper"
-	"github.com/0xPolygon/polygon-edge/command/rootchain/server"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft"
-	"github.com/0xPolygon/polygon-edge/consensus/polybft/wallet"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/command"
+	bridgeCommon "github.com/ether-edge/ether-edge/command/bridge/common"
+	"github.com/ether-edge/ether-edge/command/genesis"
+	cmdHelper "github.com/ether-edge/ether-edge/command/helper"
+	"github.com/ether-edge/ether-edge/command/polybftsecrets"
+	rootHelper "github.com/ether-edge/ether-edge/command/rootchain/helper"
+	"github.com/ether-edge/ether-edge/command/rootchain/server"
+	"github.com/ether-edge/ether-edge/consensus/polybft"
+	"github.com/ether-edge/ether-edge/consensus/polybft/wallet"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 type TestBridge struct {

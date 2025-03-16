@@ -4,7 +4,7 @@ In this section, we'll go over how to unstake a validator's staked tokens and wi
 
 :::info Check validator information
 
-First, check your validator information by running the `polygon-edge polybft validator-info` command.
+First, check your validator information by running the `ether-edge polybft validator-info` command.
 
 <details>
 <summary>Flags ↓</summary>
@@ -22,14 +22,14 @@ First, check your validator information by running the `polygon-edge polybft val
 </details>
 
 ```bash
-./polygon-edge polybft validator-info --data-dir ./test-chain-1
+./ether-edge polybft validator-info --data-dir ./test-chain-1
 ```
 
 This will show you information about your validator account, including the staked amount.
 
 :::
 
-To unstake, use the `polygon-edge polybft unstake` command.
+To unstake, use the `ether-edge polybft unstake` command.
 
 <details>
 <summary>Flags ↓</summary>
@@ -44,7 +44,7 @@ To unstake, use the `polygon-edge polybft unstake` command.
 </details>
 
 ```bash
-./polygon-edge polybft unstake \
+./ether-edge polybft unstake \
   --account-dir <DATA_DIR> \
   --jsonrpc <JSONRPC_ADDR> \
   --amount <AMOUNT>
@@ -52,7 +52,7 @@ To unstake, use the `polygon-edge polybft unstake` command.
 
 ## Withdraw
 
-Once you have successfully unstaked, you will need to withdraw your unstaked tokens from the Edge-powered chain to the rootchain. To do so, use the `polygon-edge polybft withdraw-child` command.
+Once you have successfully unstaked, you will need to withdraw your unstaked tokens from the Edge-powered chain to the rootchain. To do so, use the `ether-edge polybft withdraw-child` command.
 
 <details>
 <summary>Flags ↓</summary>
@@ -60,13 +60,13 @@ Once you have successfully unstaked, you will need to withdraw your unstaked tok
 | Flag | Description | Example |
 |------|-------------|---------|
 | `--config` | The path to the SecretsManager config file, if omitted, the local FS secrets manager is used | `~/secrets.json` |
-| `--data-dir` | The directory for the Polygon Edge data if the local FS is used | `~/polygon-edge/data` |
+| `--data-dir` | The directory for the Polygon Edge data if the local FS is used | `~/ether-edge/data` |
 | `--jsonrpc` | The JSON-RPC interface (default "0.0.0.0:8545") | `127.0.0.1:8545` |
 
 </details>
 
 ```bash
-./polygon-edge polybft withdraw-child \
+./ether-edge polybft withdraw-child \
     --account-dir <DATA_DIR> \
     --jsonrpc <JSONRPC_ADDR>
 ```
@@ -80,7 +80,7 @@ You can confirm that the checkpoint has been successfully processed by checking 
 
 ### Send an Exit Transaction
 
-Once the exit event has been included in a checkpoint, you can send an exit transaction to execute the transaction on the rootchain. To do so, use the `polygon-edge bridge exit` command.
+Once the exit event has been included in a checkpoint, you can send an exit transaction to execute the transaction on the rootchain. To do so, use the `ether-edge bridge exit` command.
 
 <details>
 <summary>Flags ↓</summary>
@@ -97,7 +97,7 @@ Once the exit event has been included in a checkpoint, you can send an exit tran
 </details>
 
   ```bash
-  ./polygon-edge bridge exit \
+  ./ether-edge bridge exit \
       --sender-key <hex_encoded_txn_sender_private_key> \
       --exit-helper <exit_helper_address> \
       --exit-id <exit_event_id> \
@@ -109,7 +109,7 @@ This will trigger the withdrawal of the specified amount of tokens from the root
 
 ### Withdraw from Root
 
-Finally, you can withdraw your tokens from the rootchain to your address by using the `polygon-edge polybft withdraw-root` command.
+Finally, you can withdraw your tokens from the rootchain to your address by using the `ether-edge polybft withdraw-root` command.
 
 <details>
 <summary>Flags ↓</summary>
@@ -126,7 +126,7 @@ Finally, you can withdraw your tokens from the rootchain to your address by usin
 </details>
 
   ```bash
-  ./polygon-edge polybft withdraw-root \
+  ./ether-edge polybft withdraw-root \
     --account-dir <DATA_DIR> \
     --to <RECIPIENT_ADDRESS> \
     --amount <AMOUNT> \

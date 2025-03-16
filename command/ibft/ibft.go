@@ -1,13 +1,13 @@
 package ibft
 
 import (
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/command/ibft/candidates"
-	"github.com/0xPolygon/polygon-edge/command/ibft/propose"
-	"github.com/0xPolygon/polygon-edge/command/ibft/quorum"
-	"github.com/0xPolygon/polygon-edge/command/ibft/snapshot"
-	"github.com/0xPolygon/polygon-edge/command/ibft/status"
-	_switch "github.com/0xPolygon/polygon-edge/command/ibft/switch"
+	"github.com/ether-edge/ether-edge/command/helper"
+	"github.com/ether-edge/ether-edge/command/ibft/candidates"
+	"github.com/ether-edge/ether-edge/command/ibft/propose"
+	"github.com/ether-edge/ether-edge/command/ibft/quorum"
+	"github.com/ether-edge/ether-edge/command/ibft/snapshot"
+	"github.com/ether-edge/ether-edge/command/ibft/status"
+	_switch "github.com/ether-edge/ether-edge/command/ibft/switch"
 	"github.com/spf13/cobra"
 )
 

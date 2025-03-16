@@ -82,7 +82,7 @@ values={[
 | `--dir` | Represents the file path for the genesis data | "./genesis.json" | NO | `genesis --dir "/data/genesis.json"` | NO |
 | `--epoch-reward` | Reward size for block sealing | 1 | NO | `genesis --epoch-reward "10"` | NO |
 | `--epoch-size` | The epoch size for the chain | 100000 | NO | `genesis --epoch-size "10"` | NO |
-| `--name` | The name for the chain | "polygon-edge" | NO | `genesis --name "test-chain"` | NO |
+| `--name` | The name for the chain | "ether-edge" | NO | `genesis --name "test-chain"` | NO |
 | `--premine` | The premined accounts and balances | []string{} | NO | `genesis --premine 0x85da99c8a7c2c95964c8efd687e95e632fc533d6:1000000000000000000000` | NO |
 | `--sprint-size` | The number of blocks included into a sprint | 5 | NO | `genesis --sprint-size "2"` | NO |
 | `--trieroot` | Trie root from the corresponding triedb | "" | NO | `genesis --trieroot "0xabc123"` | NO |

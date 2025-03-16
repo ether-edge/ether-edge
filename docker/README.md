@@ -13,7 +13,7 @@ When deploying with `polybft` consensus, there are some additional dependencies:
 
 ## Local development
 
-Running `polygon-edge` local cluster with docker can be done very easily by using provided `scripts` folder
+Running `ether-edge` local cluster with docker can be done very easily by using provided `scripts` folder
 or by running `docker-compose` manually.
 
 ### Using provided `scripts` folder
@@ -46,7 +46,7 @@ or by running `docker-compose` manually.
 
 ## Customization
 
-Use `docker/local/polygon-edge.sh` script to customize chain parameters.
+Use `docker/local/ether-edge.sh` script to customize chain parameters.
 All parameters can be defined at the very beginning of the script, in the `CHAIN_CUSTOM_OPTIONS` variable.
 It already has some default parameters, which can be easily modified.
 These are the `genesis` parameters from the official [docs](https://wiki.polygon.technology/docs/edge/operate/param-reference/).  

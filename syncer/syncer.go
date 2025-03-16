@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/0xPolygon/polygon-edge/helper/progress"
-	"github.com/0xPolygon/polygon-edge/network/event"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/helper/progress"
+	"github.com/ether-edge/ether-edge/network/event"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/armon/go-metrics"
 	"github.com/hashicorp/go-hclog"
 	"github.com/libp2p/go-libp2p/core/peer"

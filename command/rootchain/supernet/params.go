@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	sidechainHelper "github.com/0xPolygon/polygon-edge/command/sidechain"
+	"github.com/ether-edge/ether-edge/command/helper"
+	sidechainHelper "github.com/ether-edge/ether-edge/command/sidechain"
 )
 
 const (

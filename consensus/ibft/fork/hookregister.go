@@ -1,7 +1,7 @@
 package fork
 
 import (
-	"github.com/0xPolygon/polygon-edge/consensus/ibft/hook"
+	"github.com/ether-edge/ether-edge/consensus/ibft/hook"
 )
 
 // PoAHookRegisterer that registers hooks for PoA mode

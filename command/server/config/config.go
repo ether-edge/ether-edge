@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/0xPolygon/polygon-edge/network"
+	"github.com/ether-edge/ether-edge/network"
 	"github.com/hashicorp/hcl"
 	"gopkg.in/yaml.v3"
 )

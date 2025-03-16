@@ -4,7 +4,7 @@ services:
   ## RUN ROOTCHAIN
   rootchain:
     image: ghcr.io/0xpolygon/go-ethereum-console:latest
-    container_name: polygon-edge-rootchain
+    container_name: ether-edge-rootchain
     command: [
       "--dev",
       "--dev.period", "2",
@@ -22,15 +22,15 @@ services:
     volumes:
       - eth1data:/eth1data
     networks:
-      - polygon-edge-docker
+      - ether-edge-docker
 
   ## INITIALIZE GENESIS AND SECRETS, ETC.
   init:
     build:
       context: ../../
       dockerfile: docker/local/Dockerfile
-    image: local/polygon-edge
-    container_name: polygon-edge-bootstrapper
+    image: local/ether-edge
+    container_name: ether-edge-bootstrapper
     command: [ "init", "${EDGE_CONSENSUS:-polybft}" ]
     depends_on:
       rootchain:
@@ -38,12 +38,12 @@ services:
     volumes:
       - data:/data
     networks:
-      - polygon-edge-docker
+      - ether-edge-docker
 
   ## RUN NODES
   node-1:
-    image: local/polygon-edge
-    container_name: polygon-edge-validator-1
+    image: local/ether-edge
+    container_name: ether-edge-validator-1
     command: [ "start-node-1", "${EDGE_CONSENSUS:-polybft}" ]
     depends_on:
       init:
@@ -57,12 +57,12 @@ services:
     volumes:
       - data:/data
     networks:
-      - polygon-edge-docker
+      - ether-edge-docker
     restart: on-failure
 
   node-2:
-    image: local/polygon-edge
-    container_name: polygon-edge-validator-2
+    image: local/ether-edge
+    container_name: ether-edge-validator-2
     command: [
       "server",
       "--data-dir",
@@ -86,12 +86,12 @@ services:
     volumes:
       - data:/data
     networks:
-      - polygon-edge-docker
+      - ether-edge-docker
     restart: on-failure
 
   node-3:
-    image: local/polygon-edge
-    container_name: polygon-edge-validator-3
+    image: local/ether-edge
+    container_name: ether-edge-validator-3
     command: [
       "server",
       "--data-dir", "/data/data-3",
@@ -114,12 +114,12 @@ services:
     volumes:
       - data:/data
     networks:
-      - polygon-edge-docker
+      - ether-edge-docker
     restart: on-failure
 
   node-4:
-    image: local/polygon-edge
-    container_name: polygon-edge-validator-4
+    image: local/ether-edge
+    container_name: ether-edge-validator-4
     command: [
       "server",
       "--data-dir",  "/data/data-4",
@@ -142,13 +142,13 @@ services:
     volumes:
       - data:/data
     networks:
-      - polygon-edge-docker
+      - ether-edge-docker
     restart: on-failure
 
 networks:
-  polygon-edge-docker:
+  ether-edge-docker:
     driver: bridge
-    name: polygon-edge-docker
+    name: ether-edge-docker
 
 volumes:
   data:

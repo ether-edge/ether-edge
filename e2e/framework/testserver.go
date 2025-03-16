@@ -30,26 +30,26 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	empty "google.golang.org/protobuf/types/known/emptypb"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/command/genesis"
-	"github.com/0xPolygon/polygon-edge/command/genesis/predeploy"
-	ibftSwitch "github.com/0xPolygon/polygon-edge/command/ibft/switch"
-	initCmd "github.com/0xPolygon/polygon-edge/command/secrets/init"
-	"github.com/0xPolygon/polygon-edge/command/server"
-	"github.com/0xPolygon/polygon-edge/consensus/ibft/fork"
-	ibftOp "github.com/0xPolygon/polygon-edge/consensus/ibft/proto"
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	stakingHelper "github.com/0xPolygon/polygon-edge/helper/staking"
-	"github.com/0xPolygon/polygon-edge/helper/tests"
-	"github.com/0xPolygon/polygon-edge/network"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/secrets/local"
-	"github.com/0xPolygon/polygon-edge/server/proto"
-	txpoolProto "github.com/0xPolygon/polygon-edge/txpool/proto"
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
+	"github.com/ether-edge/ether-edge/chain"
+	"github.com/ether-edge/ether-edge/command"
+	"github.com/ether-edge/ether-edge/command/genesis"
+	"github.com/ether-edge/ether-edge/command/genesis/predeploy"
+	ibftSwitch "github.com/ether-edge/ether-edge/command/ibft/switch"
+	initCmd "github.com/ether-edge/ether-edge/command/secrets/init"
+	"github.com/ether-edge/ether-edge/command/server"
+	"github.com/ether-edge/ether-edge/consensus/ibft/fork"
+	ibftOp "github.com/ether-edge/ether-edge/consensus/ibft/proto"
+	"github.com/ether-edge/ether-edge/crypto"
+	"github.com/ether-edge/ether-edge/helper/common"
+	stakingHelper "github.com/ether-edge/ether-edge/helper/staking"
+	"github.com/ether-edge/ether-edge/helper/tests"
+	"github.com/ether-edge/ether-edge/network"
+	"github.com/ether-edge/ether-edge/secrets"
+	"github.com/ether-edge/ether-edge/secrets/local"
+	"github.com/ether-edge/ether-edge/server/proto"
+	txpoolProto "github.com/ether-edge/ether-edge/txpool/proto"
+	"github.com/ether-edge/ether-edge/types"
+	"github.com/ether-edge/ether-edge/validators"
 )
 
 type TestServerConfigCallback func(*TestServerConfig)
@@ -57,7 +57,7 @@ type TestServerConfigCallback func(*TestServerConfig)
 const (
 	serverIP    = "127.0.0.1"
 	initialPort = 12000
-	binaryName  = "polygon-edge"
+	binaryName  = "ether-edge"
 )
 
 type TestServer struct {

@@ -4,16 +4,16 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	itrie "github.com/0xPolygon/polygon-edge/state/immutable-trie"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/command"
+	itrie "github.com/ether-edge/ether-edge/state/immutable-trie"
+	"github.com/ether-edge/ether-edge/types"
 	"github.com/spf13/cobra"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 )
 
 /*
-./polygon-edge regenesis --target-path ./trie_new \
+./ether-edge regenesis --target-path ./trie_new \
 --stateRoot 0xf5ef1a28c82226effb90f4465180ec3469226747818579673f4be929f1cd8663  \
 --source-path ./test-chain-1/trie
 */

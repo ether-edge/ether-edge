@@ -1,19 +1,19 @@
 package server
 
 import (
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/consensus"
-	consensusDev "github.com/0xPolygon/polygon-edge/consensus/dev"
-	consensusDummy "github.com/0xPolygon/polygon-edge/consensus/dummy"
-	consensusIBFT "github.com/0xPolygon/polygon-edge/consensus/ibft"
-	consensusPolyBFT "github.com/0xPolygon/polygon-edge/consensus/polybft"
-	"github.com/0xPolygon/polygon-edge/forkmanager"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/secrets/awsssm"
-	"github.com/0xPolygon/polygon-edge/secrets/gcpssm"
-	"github.com/0xPolygon/polygon-edge/secrets/hashicorpvault"
-	"github.com/0xPolygon/polygon-edge/secrets/local"
-	"github.com/0xPolygon/polygon-edge/state"
+	"github.com/ether-edge/ether-edge/chain"
+	"github.com/ether-edge/ether-edge/consensus"
+	consensusDev "github.com/ether-edge/ether-edge/consensus/dev"
+	consensusDummy "github.com/ether-edge/ether-edge/consensus/dummy"
+	consensusIBFT "github.com/ether-edge/ether-edge/consensus/ibft"
+	consensusPolyBFT "github.com/ether-edge/ether-edge/consensus/polybft"
+	"github.com/ether-edge/ether-edge/forkmanager"
+	"github.com/ether-edge/ether-edge/secrets"
+	"github.com/ether-edge/ether-edge/secrets/awsssm"
+	"github.com/ether-edge/ether-edge/secrets/gcpssm"
+	"github.com/ether-edge/ether-edge/secrets/hashicorpvault"
+	"github.com/ether-edge/ether-edge/secrets/local"
+	"github.com/ether-edge/ether-edge/state"
 )
 
 type GenesisFactoryHook func(config *chain.Chain, engineName string) func(*state.Transition) error

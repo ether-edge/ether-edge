@@ -11,8 +11,8 @@ import (
 	"github.com/hashicorp/go-hclog"
 	"github.com/stretchr/testify/require"
 
-	"github.com/0xPolygon/polygon-edge/helper/tests"
-	"github.com/0xPolygon/polygon-edge/versioning"
+	"github.com/ether-edge/ether-edge/helper/tests"
+	"github.com/ether-edge/ether-edge/versioning"
 )
 
 func TestHTTPServer(t *testing.T) {
@@ -22,7 +22,7 @@ func TestHTTPServer(t *testing.T) {
 
 func Test_handleGetRequest(t *testing.T) {
 	var (
-		chainName = "polygon-edge-test"
+		chainName = "ether-edge-test"
 		chainID   = uint64(200)
 	)
 

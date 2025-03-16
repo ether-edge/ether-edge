@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/0xPolygon/polygon-edge/network/common"
-	peerEvent "github.com/0xPolygon/polygon-edge/network/event"
+	"github.com/ether-edge/ether-edge/network/common"
+	peerEvent "github.com/ether-edge/ether-edge/network/event"
 
-	"github.com/0xPolygon/polygon-edge/helper/tests"
+	"github.com/ether-edge/ether-edge/helper/tests"
 
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/network"

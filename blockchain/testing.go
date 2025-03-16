@@ -6,15 +6,15 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/blockchain/storage"
-	"github.com/0xPolygon/polygon-edge/blockchain/storage/memory"
+	"github.com/ether-edge/ether-edge/blockchain/storage"
+	"github.com/ether-edge/ether-edge/blockchain/storage/memory"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/state"
-	itrie "github.com/0xPolygon/polygon-edge/state/immutable-trie"
+	"github.com/ether-edge/ether-edge/chain"
+	"github.com/ether-edge/ether-edge/state"
+	itrie "github.com/ether-edge/ether-edge/state/immutable-trie"
 	"github.com/hashicorp/go-hclog"
 
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/types"
 )
 
 var (

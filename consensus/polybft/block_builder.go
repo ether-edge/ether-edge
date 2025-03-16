@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/0xPolygon/polygon-edge/consensus"
-	"github.com/0xPolygon/polygon-edge/state"
-	"github.com/0xPolygon/polygon-edge/txpool"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/ether-edge/ether-edge/consensus"
+	"github.com/ether-edge/ether-edge/state"
+	"github.com/ether-edge/ether-edge/txpool"
+	"github.com/ether-edge/ether-edge/types"
 	hcf "github.com/hashicorp/go-hclog"
 )
 

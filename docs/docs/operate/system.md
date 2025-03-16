@@ -19,7 +19,7 @@ This is the minimum hardware configuration required to set up a Edge-powered cha
 
 ## Prerequisites
 
-Before starting any of the tutorials, you should understand the basics of blockchain technology and be familiar with command-line interfaces. It would help if you also had the `polygon-edge` binary installed on your machine. Check out the [<ins>installation guide</ins>](install.md) for more information if you haven't already.
+Before starting any of the tutorials, you should understand the basics of blockchain technology and be familiar with command-line interfaces. It would help if you also had the `ether-edge` binary installed on your machine. Check out the [<ins>installation guide</ins>](install.md) for more information if you haven't already.
 
 Ensure you have the following system prerequisites:
 

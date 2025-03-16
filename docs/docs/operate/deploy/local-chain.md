@@ -4,7 +4,7 @@ In this section, we'll prepare initiate a new chain with PolyBFT consensus and p
 
 To initialize PolyBFT consensus, we need to generate the necessary secrets for each node.
 
-The `polygon-edge polybft-secrets` command is used to generate account secrets for validators. The command initializes private keys for the consensus client (validators + networking) to a Secrets Manager config file.
+The `ether-edge polybft-secrets` command is used to generate account secrets for validators. The command initializes private keys for the consensus client (validators + networking) to a Secrets Manager config file.
 
 <details>
 <summary>Flags ↓</summary>
@@ -23,7 +23,7 @@ The `polygon-edge polybft-secrets` command is used to generate account secrets f
 </details>
 
   ```bash
-  ./polygon-edge polybft-secrets --insecure --data-dir test-chain- --num 4
+  ./ether-edge polybft-secrets --insecure --data-dir test-chain- --num 4
   ```
 
 <details>
@@ -92,7 +92,7 @@ Follow the prompts to complete the login process.
 
 ### Step 2: Create Config.json File
 
-Next, create a config.json file within your polygon-edge directory with the following contents:
+Next, create a config.json file within your ether-edge directory with the following contents:
 
 ```json
 {
@@ -133,7 +133,7 @@ The generated secrets include the following information for each validator node:
 - **BLS Private and Public Keys**: These keys are used in the Byzantine fault-tolerant (BFT) consensus protocol to aggregate and verify signatures efficiently.
 - **P2P Networking Node ID**: This is a unique identifier for each validator node in the network, allowing them to establish and maintain connections with other nodes.
 
-> The secrets output can be retrieved again if needed by running the following command: `./polygon-edge polybft-secrets --data-dir test-chain-X/`
+> The secrets output can be retrieved again if needed by running the following command: `./ether-edge polybft-secrets --data-dir test-chain-X/`
 
 ## 2. Next Steps
 

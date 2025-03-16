@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/umbracle/ethgo/wallet"
 
-	"github.com/0xPolygon/polygon-edge/bls"
-	"github.com/0xPolygon/polygon-edge/secrets/helper"
+	"github.com/ether-edge/ether-edge/bls"
+	"github.com/ether-edge/ether-edge/secrets/helper"
 )
 
 // Test initKeys
